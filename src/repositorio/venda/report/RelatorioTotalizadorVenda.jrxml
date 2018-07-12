@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioTotalizadorVenda" pageWidth="350" pageHeight="842" columnWidth="310" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="51"/>
+	<field name="dataVenda" class="java.lang.String"/>
+	<field name="valorVendasDoDia" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="240" y="49" width="71" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "dataGeracao" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="42" width="100" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Relatório]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="24" height="69" backcolor="#666666"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="0" width="283" height="42"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="36"/>
+				</textElement>
+				<text><![CDATA[Totais de Vendas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="49" width="43" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gerado: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="68" width="311" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52">
+			<staticText>
+				<reportElement x="5" y="4" width="54" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Iskoola Pota" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente...:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="4" width="250" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "nomeCliente" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="28" width="54" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Iskoola Pota" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Período..:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="28" width="55" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "periodoInicial" )]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="50" width="311" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="121" y="28" width="18" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Iskoola Pota" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[até]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="28" width="65" height="17"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "periodoFinal" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="103" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="121" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[VALOR VENDIDO NO DIA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="18" width="310" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="22" width="311" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="103" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dataVenda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{valorVendasDoDia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="114" y="3" width="21" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[R$]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

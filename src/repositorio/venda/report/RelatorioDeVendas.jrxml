@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDeVendas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="404"/>
+	<property name="ireport.y" value="327"/>
+	<subDataset name="dataset1"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Y:\\Java\\Fatec\\2012_02 Curso Java\\Projeto4\\src\\repositorio\\venda\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="itensDaVendaList" class="java.util.List"/>
+	<field name="cliente.nome" class="java.lang.String"/>
+	<field name="vendedor.nome" class="java.lang.String"/>
+	<field name="dataDaVenda" class="java.util.Date"/>
+	<field name="valorTotal" class="java.lang.Double"/>
+	<field name="cliente.cpf" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="463" y="49" width="90" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{REPORT_PARAMETERS_MAP}.get( "dataGeracao" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="42" width="100" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Relatório]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="24" height="69" backcolor="#666666"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="34" y="0" width="190" height="42"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="36"/>
+				</textElement>
+				<text><![CDATA[Vendas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="49" width="43" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gerado: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="68" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="188" splitType="Stretch">
+			<subreport>
+				<reportElement x="4" y="53" width="551" height="128"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{itensDaVendaList})]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "RelatorioDeVendas_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="0" y="187" width="553" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.5" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="4" y="6" width="83" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Rod" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA.....:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="87" y="6" width="104" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rod" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{dataDaVenda}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="196" y="26" width="83" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Rod" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTE..:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="26" width="272" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Rod"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cliente.nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="26" width="83" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Rod" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR....:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="87" y="27" width="68" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Rod" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{valorTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="196" y="5" width="83" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Rod" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VENDEDOR.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="6" width="272" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Rod"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vendedor.nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

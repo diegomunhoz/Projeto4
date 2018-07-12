@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="VendaCliente" class="to.venda.Cliente">
+	</bean>
+
+	<bean id="VendaProduto" class="to.venda.Produto">
+	</bean>
+
+	<bean id="VendaVendedor" class="to.venda.Vendedor">
+	</bean>
+
+	<bean id="VendaItemDaVenda" class="to.venda.ItemDaVenda">
+		<property name="venda" ref="VendaVenda" />
+		<property name="produto" ref="VendaProduto" />
+	</bean>
+
+	<bean id="VendaVenda" class="to.venda.Venda">
+		<property name="vendedor" ref="VendaVendedor" />
+		<property name="cliente" ref="VendaCliente" />
+		<property name="itensDaVenda">
+			<set>
+				<ref bean="VendaItemDaVenda" />
+			</set>
+		</property>
+	</bean>
+
+</beans>
+

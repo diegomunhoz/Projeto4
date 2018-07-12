@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configurações da conexão -->
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/projeto4</property>
+
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- Dialeto utilizado -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Auto criação da base da dados -->
+		<property name="hbm2ddl.auto">create</property>
+		<!--	<property name="hibernate.show_sql">true</property> -->
+
+		<mapping class="to.enderecobrasil.Cidade" />
+		<mapping class="to.enderecobrasil.Endereco" />
+		<mapping class="to.enderecobrasil.Estado" />
+
+		<mapping class="to.agendamento.Agendamento" />
+		<mapping class="to.agendamento.Funcionario" />
+		<mapping class="to.agendamento.Servico" />
+
+		<mapping class="to.turma.Aluno" />
+		<mapping class="to.turma.Professor" />
+		<mapping class="to.turma.Turma" />
+		<mapping class="to.turma.AlunoDaTurma" />
+
+		<mapping class="to.venda.Cliente" />
+		<mapping class="to.venda.ItemDaVenda" />
+		<mapping class="to.venda.Produto" />
+		<mapping class="to.venda.Venda" />
+		<mapping class="to.venda.Vendedor" />
+
+		<mapping class="to.pagamento.FormaPagamento" />
+		<mapping class="to.pagamento.Compra" />
+
+	</session-factory>
+</hibernate-configuration>

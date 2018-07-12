@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="to.vendaClassDiagram" id="{UMLID=_u0mZsG6-EeGmubD4RYcmwA,JavaID=to.venda}" metadata="uml2-1.0" initialized="true" zoom="0.5" tag="10" key="32303037303632392050726F6A65746F34">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="Vendedor" location="742,252" size="453,163" timstampe="38" stereotype="Entity, andromda_persistence_table" id="{UMLID=_wDnxkW6-EeGmubD4RYcmwA,JavaID=to.venda/Vendedor}" runTimeClassModel="getListaDeVendasEfetivadas(),setCpf(Ljava.lang.String;),getNome(),setNome(Ljava.lang.String;),getTelefone(),id,getId(),listaDeVendasEfetivadas,telefone,setId(Ljava.lang.Long;),cpf,nome,getCpf(),setTelefone(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="432,95">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="432,16" id="{UMLID=_wLetEG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nome" size="350,16" id="{UMLID=_wLhwYG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cpf" size="325,16" id="{UMLID=_wLgiQW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="telefone" size="371,16" id="{UMLID=_wLf7MW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listaDeVendasEfetivadas" size="365,21" id="{UMLID=_wLfUIG6-EeGmubD4RYcmwA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="185,167"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.1 //@children.4/@sourceConnections.0" name="Venda" location="350,13" size="465,191" timstampe="18" stereotype="Entity, andromda_persistence_table" id="{UMLID=_vuG0kG6-EeGmubD4RYcmwA,JavaID=to.venda/Venda}" runTimeClassModel="addItensNaVenda(Lto.venda.Produto;Ljava.lang.Integer;),vendedor,totalizarVenda(),getIntensDaVenda(),getDataDaVenda(),id,Venda(),getCliente(),cliente,getId(),dataDaVenda,setId(Ljava.lang.Long;),removeItensNaVenda(Lto.venda.Produto;),setCliente(Lto.venda.Cliente;),getValorTotal(),valorTotal,setItensDaVenda(LCollection;),getVendedor(),itensDaVenda,setVendedor(Lto.venda.Vendedor;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="444,123">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="416,16" id="{UMLID=_wDmjcG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vendedor" size="444,21" id="{UMLID=_wDnKgW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cliente" size="414,21" id="{UMLID=_wDoYoW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dataDaVenda" size="408,16" id="{UMLID=_wDo_sG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="valorTotal" size="378,16" id="{UMLID=_wDpmwG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="itensDaVenda" size="312,21" id="{UMLID=_wDqN0G6-EeGmubD4RYcmwA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,277"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_wMbvUG6-EeGmubD4RYcmwA}" source="//@children.1" target="//@children.0" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="listaDeVendasEfetivadas" location="428,191" id="{UMLID=_wLfUIG6-EeGmubD4RYcmwA}" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.1/@sourceConnections.0/@children.1/@children.1" aggregationKind="Composition" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="755,211" size="16,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- listaDeVendasEfetivadas" location="678,262" size="127,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="41.0" distanceFromWire="-37.0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="vendedor" location="36,0" id="{UMLID=_wDnKgW6-EeGmubD4RYcmwA}" multiplicityLabel="//@children.1/@sourceConnections.0/@children.2/@children.0" roleLabel="//@children.1/@sourceConnections.0/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="765,231" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- vendedor" location="732,253" size="53,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="32.0" distanceFromWire="-19.999999999999993" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="Produto" location="44,480" size="444,140" timstampe="2" stereotype="Entity, andromda_persistence_table" id="{UMLID=_vuE_YW6-EeGmubD4RYcmwA,JavaID=to.venda/Produto}" runTimeClassModel="id,setValor(Ljava.lang.Double;),getDescricao(),getId(),valor,setDescricao(Ljava.lang.String;),setId(Ljava.lang.Long;),getNome(),setNome(Ljava.lang.String;),nome,getValor(),descricao">
+    <children xsi:type="editmodel:CompartmentEditModel" size="423,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="423,16" id="{UMLID=_wOtAMG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nome" size="350,16" id="{UMLID=_wOuOUW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="descricao" size="394,16" id="{UMLID=_wOu1YG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="valor" size="346,16" id="{UMLID=_wOtnQW6-EeGmubD4RYcmwA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="104,144"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ItenDaVenda" location="42,266" size="447,168" timstampe="3" stereotype="Entity, andromda_persistence_table" id="{UMLID=_vsLh8G6-EeGmubD4RYcmwA,JavaID=to.venda/ItenDaVenda}" runTimeClassModel="setQuantidade(Ljava.lang.Integer;),getQuantidade(),getValorUnitario(),produto,getSubTotal(),setVenda(Lto.venda.Venda;),id,getVenda(),quantidade,setValorUnitario(Ljava.lang.Double;),getId(),valorUnitario,setId(Ljava.lang.Long;),venda,getProduto(),setProduto(Lto.venda.Produto;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="426,100">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="403,16" id="{UMLID=_vto6gG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="venda" size="412,21" id="{UMLID=_vuGNgW6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="produto" size="426,21" id="{UMLID=_vuEYUm6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="quantidade" size="404,16" id="{UMLID=_vuDKM26-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="valorUnitario" size="389,16" id="{UMLID=_vuE_Y26-EeGmubD4RYcmwA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="116,218"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_vwwf8G6-EeGmubD4RYcmwA}" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="ownedEnd" location="223,168" id="{UMLID=_vwwf8W6-EeGmubD4RYcmwA}" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.0/@children.1/@children.0" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="271,441" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="produto" location="221,0" id="{UMLID=_vuEYUm6-EeGmubD4RYcmwA}" multiplicityLabel="//@children.3/@sourceConnections.0/@children.2/@children.0" roleLabel="//@children.3/@sourceConnections.0/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="251,459" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- produto" location="271,459" size="44,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_wGm0IG6-EeGmubD4RYcmwA}" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="itensDaVenda" location="377,0" id="{UMLID=_wDqN0G6-EeGmubD4RYcmwA}" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.1/@children.1/@children.0" roleLabel="//@children.3/@sourceConnections.1/@children.1/@children.1" aggregationKind="Composition" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="395,245" size="16,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- itensDaVenda" location="416,234" size="74,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="-6.0" distanceFromWire="-35.0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="venda" location="69,191" id="{UMLID=_vuGNgW6-EeGmubD4RYcmwA}" multiplicityLabel="//@children.3/@sourceConnections.1/@children.2/@children.0" roleLabel="//@children.3/@sourceConnections.1/@children.2/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="405,211" size="6,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- venda" location="425,211" size="37,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Cliente" location="518,440" size="461,181" timstampe="110" stereotype="Entity, andromda_persistence_table" id="{UMLID=_v8HbYG6-EeGmubD4RYcmwA,JavaID=to.venda/Cliente}" runTimeClassModel="getDataNascimento(),setDataNascimento(Ljava.util.Date;),setCpf(Ljava.lang.String;),getNome(),setNome(Ljava.lang.String;),listaDeComprasEfetivadas,getTelefone(),id,getId(),setId(Ljava.lang.Long;),telefone,getListaDeComprasEfetivadas(),dataNascimento,cpf,nome,getCpf(),setTelefone(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="440,113">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="417,16" id="{UMLID=_v8RMYG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nome" size="350,16" id="{UMLID=_v8Vd0G6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cpf" size="325,16" id="{UMLID=_v8U2wm6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="telefone" size="376,16" id="{UMLID=_v8SagG6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dataNascimento" size="440,16" id="{UMLID=_v8TBkm6-EeGmubD4RYcmwA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listaDeComprasEfetivadas" size="371,21" id="{UMLID=_v8WE4G6-EeGmubD4RYcmwA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,203"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="{UMLID=_wGmNEG6-EeGmubD4RYcmwA}" source="//@children.4" target="//@children.1" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="cliente" location="148,0" id="{UMLID=_wDoYoW6-EeGmubD4RYcmwA}" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.0/@children.1/@children.0" roleLabel="//@children.4/@sourceConnections.0/@children.1/@children.1" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="653,419" size="6,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- cliente" location="673,419" size="38,14" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="listaDeComprasEfetivadas" location="316,191" id="{UMLID=_v8WE4G6-EeGmubD4RYcmwA}" multiplicityLabel="//@children.4/@sourceConnections.0/@children.2/@children.0" roleLabel="//@children.4/@sourceConnections.0/@children.2/@children.1" aggregationKind="Composition" navigable="true" flags="2">
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="643,211" size="16,14" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- listaDeComprasEfetivadas" location="541,291" size="133,14" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="23.999999999999996" distanceFromWire="59.0" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1484,602" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>
